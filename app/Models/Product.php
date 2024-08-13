@@ -11,6 +11,9 @@ class Product extends Model
 
     protected $fillable = [
         'name',
-        'description'
+        'sets',
+        'repitition',
+        'description',
+        'youtube_link',
     ];
 }
