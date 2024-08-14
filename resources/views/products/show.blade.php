@@ -24,11 +24,35 @@
                     </div>
 
                     <div class="row">
-                        <label for="description" class="col-md-4 col-form-label text-md-end text-start"><strong>Description:</strong></label>
+                        <label for="sets" class="col-md-4 col-form-label text-md-end text-start"><strong>Sets:</strong></label>
+                        <div class="col-md-6" style="line-height: 35px;">
+                            {{ $product->sets }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="repitition" class="col-md-4 col-form-label text-md-end text-start"><strong>repitition:</strong></label>
+                        <div class="col-md-6" style="line-height: 35px;">
+                            {{ $product->repitition }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="description" class="col-md-4 col-form-label text-md-end text-start"><strong>description:</strong></label>
                         <div class="col-md-6" style="line-height: 35px;">
                             {{ $product->description }}
                         </div>
                     </div>
+
+                    <div class="row">
+                        <label for="Tutorial" class="col-md-4 col-form-label text-md-end text-start"><strong>Tutorial:</strong></label>
+                        <div class="col-md-6" style="line-height: 35px;">
+                            <a href="{{ $product->youtube_link}}" target="_blank">
+                                <button type="button" class="btn btn-primary btn-sm">Tutorial link</button>
+                            </a>
+                        </div>
+                    </div>
+
         
             </div>
         </div>

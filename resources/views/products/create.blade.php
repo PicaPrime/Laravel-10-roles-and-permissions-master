@@ -27,6 +27,7 @@
                             @endif
                         </div>
                     </div>
+
                     <div class="mb-3 row">
                         <label for="sets" class="col-md-4 col-form-label text-md-end text-start">Sets</label>
                         <div class="col-md-6">
@@ -46,7 +47,6 @@
                             @endif
                         </div>
                     </div>
-
 
                     <div class="mb-3 row">
                         <label for="description" class="col-md-4 col-form-label text-md-end text-start">Description</label>
@@ -68,7 +68,6 @@
                         </div>
                     </div>
 
-                    
                     <div class="mb-3 row">
                         <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Add Exercise">
                     </div>

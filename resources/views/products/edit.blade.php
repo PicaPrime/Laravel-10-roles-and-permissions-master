@@ -30,6 +30,37 @@
                     </div>
 
                     <div class="mb-3 row">
+                        <label for="sets" class="col-md-4 col-form-label text-md-end text-start">Sets</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control @error('sets') is-invalid @enderror" id="sets" name="sets" value="{{ $product->sets }}">
+                            @if ($errors->has('sets'))
+                                <span class="text-danger">{{ $errors->first('sets') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="sets" class="col-md-4 col-form-label text-md-end text-start">repitition</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control @error('repitition') is-invalid @enderror" id="repitition" name="repitition" value="{{ $product->repitition }}">
+                            @if ($errors->has('repitition'))
+                                <span class="text-danger">{{ $errors->first('repitition') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3 row">
+                        <label for="sets" class="col-md-4 col-form-label text-md-end text-start">Tutorial link</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control @error('youtube_link') is-invalid @enderror" id="youtube_link" name="youtube_link" value="{{ $product->youtube_link }}">
+                            @if ($errors->has('youtube_link'))
+                                <span class="text-danger">{{ $errors->first('youtube_link') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
                         <label for="description" class="col-md-4 col-form-label text-md-end text-start">Description</label>
                         <div class="col-md-6">
                             <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description">{{ $product->description }}</textarea>

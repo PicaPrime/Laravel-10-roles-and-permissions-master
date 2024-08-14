@@ -31,7 +31,7 @@
                     @endcanany
                     @canany(['create-product', 'edit-product', 'delete-product'])
                         <a class="btn btn-warning" href="{{ route('products.index') }}">
-                            <i class="bi bi-bag"></i> Manage Products</a>
+                            <i class="bi bi-bag"></i> Manage Exercises</a>
                     @endcanany
                     <p>&nbsp;</p>
                 </div>

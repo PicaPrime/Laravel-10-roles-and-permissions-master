@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Simple Laravel 10 User Roles and Permissions - AllPHPTricks.com</title>
+    <title>LaraGym</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,7 +21,9 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    AllPHPTricks.com
+                    <img class="h-8 w-auto" height="30px"
+                            src="https://scontent.fdac169-1.fna.fbcdn.net/v/t39.30808-6/305622987_520835809847709_2162659054678839266_n.png?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=jbeDHjIzl3EQ7kNvgHqSQnh&_nc_ht=scontent.fdac169-1.fna&oh=00_AYCQIzo05c5VLQhn9xFYHyK-KLrA50cIq75faIZd5GIFtg&oe=66C22755"
+                            alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -56,7 +58,7 @@
                                 <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                             @endcanany
                             @canany(['create-product', 'edit-product', 'delete-product'])
-                                <li><a class="nav-link" href="{{ route('products.index') }}">Manage Products</a></li>
+                                <li><a class="nav-link" href="{{ route('products.index') }}">Manage Exercise</a></li>
                             @endcanany
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -92,19 +94,9 @@
                             </div>
                         @endif
 
-                        <h3 class="text-center mt-3 mb-3">Simple Laravel 10 User Roles and Permissions - <a href="https://www.allphptricks.com/">AllPHPTricks.com</a></h3>
                         @yield('content')
                         
-                        <div class="row justify-content-center text-center mt-3">
-                            <div class="col-md-12">
-                                <p>Back to Tutorial: 
-                                    <a href="https://www.allphptricks.com/simple-laravel-10-user-roles-and-permissions/"><strong>Tutorial Link</strong></a>
-                                </p>
-                                <p>
-                                    For More Web Development Tutorials Visit: <a href="https://www.allphptricks.com/"><strong>AllPHPTricks.com</strong></a>
-                                </p>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>

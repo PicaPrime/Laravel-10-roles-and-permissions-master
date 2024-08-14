@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\User;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Spatie\Permission\Contracts\Role;
 
 class ProductController extends Controller
 {
@@ -39,6 +41,8 @@ class ProductController extends Controller
     {
         return view('products.create');
     }
+
+    // ['users' => User::all()->except(Role::findByName('Admin', 'Super Admin', 'Product Manager'))]
 
     /**
      * Store a newly created resource in storage.
