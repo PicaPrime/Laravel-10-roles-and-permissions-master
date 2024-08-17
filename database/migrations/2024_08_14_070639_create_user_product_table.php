@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_product', function (Blueprint $table) {
+        Schema::create('product_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class);
             $table->foreignIdFor(Product::class);
+            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */

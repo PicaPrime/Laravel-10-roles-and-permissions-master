@@ -58,8 +58,19 @@
                         <label for="products" class="col-md-4 col-form-label text-md-end text-start">Products</label>
                         <div class="col-md-6">
                           @foreach ($user->products as $product)
-                              <h1>$product->name</h1>
+                              <p> {{ $product->name }}</p>
+                              <button>Delete Exercise</button>
                           @endforeach
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="exercise" class="col-md-4 col-form-label text-md-end text-start">Add Exercises to this User</label>
+                        <div class="col-md-6">
+                            @foreach ($products as $product)
+                                <p>{{ $product->name }}</p>
+                                <button>Add Exercise</button>
+                            @endforeach
                         </div>
                     </div>
 
