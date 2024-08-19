@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\productAssignmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,11 @@ Route::resources([
     'users' => UserController::class,
     'products' => ProductController::class,
 ]);
+
+Route::post('/assign-exercise', [productAssignmentController::class, 'assign']);
+Route::get('/user-exercises/{userId}', [productAssignmentController::class, 'getUserExercises']);  
+
+
+Route::get('/assign-exercise', function () {
+    return view('users.exerciseForm.blade');
+});

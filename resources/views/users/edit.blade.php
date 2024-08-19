@@ -55,24 +55,26 @@
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="products" class="col-md-4 col-form-label text-md-end text-start">Products</label>
+                        <label for="products" class="col-md-4 col-form-label text-md-end text-start">Assgined Exercises</label>
                         <div class="col-md-6">
                           @foreach ($user->products as $product)
                               <p> {{ $product->name }}</p>
-                              <button>Delete Exercise</button>
                           @endforeach
                         </div>
+                        <a href="/user-exercises/{{$user->id}}" class="col-md-3 offset-md-5 btn btn-primary"><button class="btn btn-primary">Edit Exercises</button></a>
                     </div>
 
-                    <div class="mb-3 row">
+                    {{-- <div class="mb-3 row">
                         <label for="exercise" class="col-md-4 col-form-label text-md-end text-start">Add Exercises to this User</label>
                         <div class="col-md-6">
                             @foreach ($products as $product)
                                 <p>{{ $product->name }}</p>
-                                <button>Add Exercise</button>
+                                <div class="mb-3 row">
+                                    <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Update User">
+                                </div>
                             @endforeach
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="mb-3 row">
                         <label for="roles" class="col-md-4 col-form-label text-md-end text-start">Roles</label>
